@@ -10,17 +10,17 @@ This container has an increased limit of 512 dimensions.
 ## Build & start
 
 ### AMD64 (default)
-docker build --no-cache -t diduxio/pg512d:latest .
-docker run --rm  --name postgres -e POSTGRES_PASSWORD=docker -d -p 5432:5432 diduxio/pg512d:latest
+```docker build --no-cache -t diduxio/pg512d:latest .```
+```docker run --rm  --name postgres -e POSTGRES_PASSWORD=docker -d -p 5432:5432 diduxio/pg512d:latest```
 
 ### ARM
-docker build --no-cache -t diduxio/pg512d:arm -f Dockerfile-arm .
-docker run --rm  --name postgres -e POSTGRES_PASSWORD=docker -d -p 5432:5432 diduxio/pg512d:arm
+```docker build --no-cache -t diduxio/pg512d:arm -f Dockerfile-arm .```
+```docker run --rm  --name postgres -e POSTGRES_PASSWORD=docker -d -p 5432:5432 diduxio/pg512d:arm```
 
 ### Connecting
 ```psql -h localhost -U postgres -d postgres```
 
 ## Push (for owners of this repository)
-docker push diduxio/pg512d:latest
-docker push diduxio/pg512d:arm
+```docker push diduxio/pg512d:latest```
+```docker push diduxio/pg512d:arm```
 
